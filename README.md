@@ -4,7 +4,6 @@ Attention: this boilerplate is still in development! Do not use for production!
 ### Install
 ```sh
 git clone https://github.com/rikjacobs1390/react-boilerplate.git
-cd universal-boilerplate
 npm install
 ```
 
@@ -23,10 +22,6 @@ npm run build
 npm run serve
 ```
 
-### Switch versions (ex. v1.0.0)
-```sh
-git checkout v1.0.0
-```
 
 # Original-boilerplate:
 Original boilerplate by: https://github.com/justinjung04/universal-boilerplate.git
