@@ -1,7 +1,7 @@
 {
-  "name": "universal-boilerplate",
+  "name": "React-boilerplate",
   "version": "2.0.0",
-  "description": "Isomorphic/universal boilerplate with react, redux, webpack and express",
+  "description": "React Isomorphic/universal boilerplate with react, redux, webpack and express",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint ./src",
@@ -9,7 +9,7 @@
     "build": "rimraf dist && webpack --config ./webpack.config.prod.js",
     "serve": "cross-env NODE_ENV=production babel-node ./server.js"
   },
-  "author": "Justin Jung <justinjung04@gmail.com>",
+  "author": "Rik Jacobs",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -46,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinjung04/universal-boilerplate.git"
+    "url": "https://github.com/rikjacobs1390/react-boilerplate.git"
   }
 }
