@@ -1,13 +1,9 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import Home from '../home';
-import Page from '../page';
-import NoMatch from '../nomatch';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+if (process.env.WEBPACK) require("./index.scss");
 
-export default () => (
-  <Switch>
-    <Route exact path='/' component={Home} />
-    <Route path='/page' component={Page} />
-    <Route component={NoMatch} />
-  </Switch>
-);
+export default function App(props) {
+	console.log(props);
+
+	return <div>Apppp!!</div>;
+}
