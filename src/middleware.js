@@ -7,6 +7,11 @@ import App from './components/app';
 import reducers from './reducers';
 
 export default (req, res) => {
+
+	console.log('req = ', req);
+	console.log('res = ', res);
+
+	// If we are in production mode: we render the app completly clientSide
 	if(process.env.NODE_ENV === 'development') {
 		res.send(`
 			<!doctype html>
@@ -20,7 +25,10 @@ export default (req, res) => {
 				</body>
 			</html>
 		`);
-	} else if(process.env.NODE_ENV === 'production') {
+	}
+
+	// In production mode we want to load the app server side first!
+	else if(process.env.NODE_ENV === 'production') {
 		res.send(`
 			<!doctype html>
 			<html>
@@ -29,16 +37,19 @@ export default (req, res) => {
 					<link rel='stylesheet' href='bundle.css'>
 				</head>
 				<body>
-					<div id='app'>${renderToString(
-						<Provider store={createStore(reducers)}>
-							<StaticRouter location={req.url} context={{}}>
-								<App />
-							</StaticRouter>
-						</Provider>
-					)}</div>
+					<div id='app'>
+						${renderToString(
+							<Provider store={createStore(reducers)}>
+								<StaticRouter location={req.url} context={{}}>
+									<App />
+								</StaticRouter>
+							</Provider>
+						)}
+					</div>
 					<script src='bundle.js'></script>
 				</body>
 			</html>
 		`);
 	}
+
 };

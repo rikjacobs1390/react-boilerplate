@@ -7,7 +7,7 @@ if(process.env.WEBPACK) require('./index.scss');
 
 const Home = ({ dispatch, todos }) => (
 	<div className='home'>
-		<Header title='Home' />
+		<Header title='Home jaa' />
 		<div>This is home</div>
 		<br />
 		{todos.map((todo) => (

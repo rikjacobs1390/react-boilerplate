@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import middleware from './src/middleware';
 
 const app = express();
+const port = 3000;
 
 if(process.env.NODE_ENV === 'development') {
 	const config = require('./webpack.config.dev');
@@ -29,10 +30,10 @@ if(process.env.NODE_ENV === 'development') {
 
 app.get('*', middleware);
 
-app.listen(3000, '0.0.0.0', (err) => {
+app.listen(port, '0.0.0.0', (err) => {
 	if(err) {
 		console.error(err);
 	} else {
-		console.info('Listening at http://localhost:3000');	
+		console.info(`Listening at http://localhost:${port} in ${process.env.NODE_ENV} mode!`);
 	}
 });
