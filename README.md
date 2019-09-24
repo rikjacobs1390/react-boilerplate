@@ -1,9 +1,9 @@
-# universal-boilerplate
+# React boilerplate
+Attention: this boilerplate is still in development! Do not use for production!
 
 ### Install
 ```sh
-git clone https://github.com/justinjung04/universal-boilerplate.git
-cd universal-boilerplate
+git clone https://github.com/rikjacobs1390/react-boilerplate.git
 npm install
 ```
 
@@ -22,10 +22,7 @@ npm run build
 npm run serve
 ```
 
-### Switch versions (ex. v1.0.0)
-```sh
-git checkout v1.0.0
-```
 
-### Article
-About details of this boilerplate, please refer to: [React: Server-side Rendering and Hot Reloading](https://medium.com/@justinjung04/react-server-side-rendering-and-hot-reloading-ffb87ca81a89)
+# Original-boilerplate:
+Original boilerplate by: https://github.com/justinjung04/universal-boilerplate.git
+Original article: About details of this boilerplate, please refer to: [React: Server-side Rendering and Hot Reloading](https://medium.com/@justinjung04/react-server-side-rendering-and-hot-reloading-ffb87ca81a89)
